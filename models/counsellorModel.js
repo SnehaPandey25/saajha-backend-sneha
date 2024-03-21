@@ -35,10 +35,6 @@ const counsellorSchema = mongoose.Schema({
         type: String,
         required: [true, 'Please add a password']
     },
-    NGOid: {
-        type: String,
-        required: [true, 'Please add NGO ID']
-    },
     
 });
 

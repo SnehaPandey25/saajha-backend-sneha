@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//version 3
 const caseSchema = mongoose.Schema({
     counsellor: {
         type: mongoose.Schema.Types.ObjectId,
@@ -18,20 +19,6 @@ const caseSchema = mongoose.Schema({
         type: Date,
         required:[true, 'Please add your date of birth'],
     },
-    disability: {
-        type: String,
-    },
-    guardianName: {
-        type: String,
-        required: [true, 'Please add guardian name']
-    },
-    guardianPhone: {
-        type: Number,
-        required: [true, 'Please add guardian phone number']
-    },
-    developmentalMilestone: {
-        type: String,
-    },
     email: {
         type: String,
         required: [true, 'Please add an email'],
@@ -41,10 +28,45 @@ const caseSchema = mongoose.Schema({
         type: String,
         required: [true, 'Please add a password']
     },
-    remarks: {
+    guardianName: {
+        type: String,
+        required: [true, 'Please add guardian name']
+    },
+    guardianPhone: {
+        type: Number,
+        required: [true, 'Please add guardian phone number']
+    },
+    previousDiagnosis: {
+        type: String,
+    },
+    currentDiagnosis: {
+        type: String,
+    },
+    clinicalObservation: {
+        type: String,
+    },
+    developmentalHistory: {
+        type: String,
+    },
+    suggestedInvestigationType: {
+        type: String,
+    },
+    diagnosticTest: {
+        type: String,
+    },
+    testResults: {
+        type: String,
+    },
+    report: {
+        type: String,
+    },
+    advice: {
         type: String,
     },
     presentComplaints: {
+        type: String,
+    },
+    SuggestionsForFurtherInvestigation: {
         type: String,
     },
     

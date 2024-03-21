@@ -19,20 +19,20 @@ const counsellorprotect = asyncHandler(async (req, res, next) => {
 
       if (!req.counsellor) {
         res.status(401)
-        throw new Error('Not authorized 1')
+        throw new Error('Not authorized') //Version 3
       }
 
       next()
     } catch (error) {
       console.log(error)
       res.status(401)
-      throw new Error('Not authorized 2')
+      throw new Error('Not authorized')  //Version 3
     }
   }
 
   if (!token) {
     res.status(401)
-    throw new Error('Not authorized 3')
+    throw new Error('Not authorized')  //Version 3
   }
 })
 
